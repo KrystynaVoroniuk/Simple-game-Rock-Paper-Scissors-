@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(circle at 50% 20%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    min-height: 100vh;
+    color: white;
+}
+
+.game{
+    max-width: 100%;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.button:focus{
+    outline: none;
+}
+.top{
+    margin: 50px 0;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.name-game{
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    font-size: 3rem;
+
+}
+.counter-block{
+    background-color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.counter-block h3{
+    color: hsl(229, 64%, 46%);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+#count{
+    color: hsl(229, 25%, 31%);
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.middle-block{
+    
+    height: 350px;
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.middle-block::before{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url('./images/bg-triangle.svg');
+    content:'';
+    z-index: -1;
+    top: 20%;
+    left: 15%;
+    height: 70%;
+    width: 70%;
+}
+.figure-container{
+    height: 150px;
+    width: 150px;
+    margin: 50px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 25px;
+    cursor: pointer;
+
+}
+
+.figure-container:active{
+    transform: scale(0.9);
+}
+.figure-container .inside{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color:white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.field-paper{
+    background: linear-gradient(
+        to bottom,
+     hsl(230, 89%, 62%),
+     hsl(230, 89%, 65%))
+}
+.field-scissors{
+    background: linear-gradient(
+        to bottom,
+        hsl(39, 89%, 49%),
+        hsl(40, 84%, 53%))
+}
+.field-rock{
+    background: linear-gradient(
+        to bottom,
+        hsl(349, 71%, 52%),
+        hsl(349, 70%, 56%))
+}
+.rules{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 20px;
+    letter-spacing: 3px;
+    bottom: 50px;
+    right: 30px;
+    position: fixed;
+}
+.restart{
+    background-color: white;
+    color:  hsl(229, 25%, 31%);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 20px;
+    letter-spacing: 3px;
+
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.battle{
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: none;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.winner{
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: 3rem;
+}
+.rules-container{
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+.rules-container button{
+    background-color: transparent;
+    border: none;
+    margin-top: 100px;
+    cursor: pointer;
+
+}
+
+@media (max-width: 900px){
+    .battle .figure-container{
+        margin: 50px 20px;
+        transform: scale(1);
+    }
+
+    .for-mob{
+        order: 1;
+    }
+
+    .battle{
+        width: 500px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="game.js" ></script>
+
+</head>
+<body>
+
+<div class="game">
+  <div class="top">
+      <h1 class="name-game">
+      <span>Rock</span>
+      <span>Paper</span>
+      <span>Scissors</span>
+      </h1>
+    
+    <div class="counter-block">
+      <h3>Score</h3>
+      <div id="count">0</div>
+    </div>
+  </div>
+  <div class="middle-block" id="middle">
+   <button class="figure-container field-paper select" data-choice="paper">
+     <span class="inside">
+     <img src="./images/icon-paper.svg" alt="paper">
+    </span>
+  </button>
+   <button class="figure-container field-scissors select" data-choice="scissors">
+    <span class="inside">
+     <img src="./images/icon-scissors.svg" alt="scissors">
+    </span>
+  </button>
+   <button class="figure-container field-rock select" data-choice="rock">
+    <span class="inside">
+     <img src="./images/icon-rock.svg" alt="rock">
+    </span>
+  </button> 
+  </div>
+
+  <div class="rules-container" id="modal">
+    
+      <img src="./images/image-rules.svg" alt="rules">
+      <button id="close"><img src="./images/icon-close.svg " alt="close"></button>
+  </div>
+  <button class="rules" id="open">Rules</button>
+ 
+
+  <div class="battle" id = "battle">
+    <div>
+      <h2>You picked</h2>
+      <button class="figure-container field-paper" id="user_select">
+        <span class="inside">
+        <img src="./images/icon-paper.svg" alt="paper">
+       </span>
+      </button>
+    </div>
+    <div class="for-mob">
+      <p class="winner">You <span id = "win">Win</span></p>
+      <button class="restart" id ='replay'>Play again</button>
+    </div>
+    <div>
+      <h2>The house picked</h2>
+      <button class="figure-container field-rock" id="comp_select">
+        <span class="inside">
+         <img src="./images/icon-rock.svg" alt="rock">
+        </span>
+      </button> 
+    </div>
+    </div>
+
+</div>
+  
+</body>
+</html>
