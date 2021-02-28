@@ -189,7 +189,7 @@ h2{
 
 }
 
-@media (max-width: 900px){
+@media (max-width: 1500px){
     .battle .figure-container{
         margin: 50px 20px;
         transform: scale(1);

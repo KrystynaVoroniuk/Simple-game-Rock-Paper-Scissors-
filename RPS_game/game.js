@@ -52,10 +52,10 @@ function checkWinner(){
         (choiceUser == 'rock' && choiceComp == 'scissors') ||
         (choiceUser == 'scissors' && choiceComp == 'paper')
     ){
-        score();
+        score(1);
         winner.innerText = 'win'
     } else{
-        score();
+        score(-1);
         winner.innerText = 'lost'
     }
     middle.style.display = 'none';
@@ -67,8 +67,8 @@ function randomChoice(){
 }
 
 
-function score(){
-    countNumb += 1;
+function score(value){
+    countNumb += value;
     countUser.innerText = countNumb;
 
 }
